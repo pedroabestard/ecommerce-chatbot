@@ -1,7 +1,4 @@
 import sys
-import pysqlite3
-sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
-
 import pandas as pd
 from pathlib import Path
 import chromadb
@@ -9,6 +6,10 @@ from chromadb.utils import embedding_functions
 import dotenv
 from groq import Groq
 import os
+
+# Fix for Streamlit Cloud's old SQLite version
+__import__('pysqlite3')
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 dotenv.load_dotenv()
 
