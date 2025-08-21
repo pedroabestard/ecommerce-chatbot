@@ -30,7 +30,10 @@ It is built on a **scraped Flipkart dataset (1000 products)**, but the same appr
 │   └── faq_data.csv # FAQ dataset
 ├── db.sqlite        # Product database (scraped Flipkart products)
 ├── architecture.png # Architecture diagram
-└── README.md        # Project documentation
+├── README.md        # Project documentation
+├── requirements.txt # Requirements
+├── Screenshot_1.png # UI screenshot
+└── Screenshot_2.png # UI screenshot
 ```
 
 ---
@@ -71,6 +74,8 @@ It is built on a **scraped Flipkart dataset (1000 products)**, but the same appr
    ```env
    GROQ_MODEL=groq/llama-3.1-70b-versatile
    COHERE_API_KEY=your-cohere-api-key
+   GROQ_API_KEY=your-groq-api-key
+   HF_TOKEN=your-hf-token
    ```
 
 5. **Run Streamlit app**
